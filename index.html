@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="index.css" rel="stylesheet">
+    <title>Memo Game</title>
+</head>
+<body>
+    <svg width="0" height="0" class="hidden">
+        <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" id="restart">
+          <path d="M78.5064 56.1951C79.9392 49.4303 79.1083 42.3821 76.1417 36.1359C73.1751 29.8897 68.2373 24.7921 62.0888 21.628C55.9402 18.4639 48.922 17.409 42.115 18.6256C35.308 19.8422 29.0898 23.2629 24.4179 28.3609C19.7461 33.4589 16.8798 39.9514 16.2605 46.8385C15.6412 53.7256 17.3032 60.6253 20.9906 66.475C24.678 72.3246 30.1863 76.7998 36.667 79.2113C43.1478 81.6228 50.2416 81.8368 56.856 79.8204" stroke="white" stroke-width="5.73244"></path>
+          <path d="M67.4896 45.6497L77.2698 59.4937L92 51.602" stroke="white" stroke-width="5.86576"></path>
+        </symbol>
+      </svg>
+
+    <div class="cards__wrapper">
+        <div class="cards__container">
+            <div class="title">
+                <h1>Memo Game</h1>
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back"></div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__front"></div>
+                    <div class="card__back">
+                    </div>
+                </div>
+            </div>
+            <div class="timer">
+                <span class="minutes">1</span>
+                <span>:</span>
+                <span class="seconds">00</span>
+            </div>
+        </div>
+    </div>
+
+    <footer><a href="">Github</a></footer>
+
+    <div id="modalbg" class="modal__background"></div>
+    <div class="modal__wrapper">
+        <div class="modal">
+            <div class="modal__body">
+                <picture class="modal__picture"><img src="img/absence.png" alt="picture" /></picture>
+                <div><h2 class="modal__title">absence</h2></div>
+                <div class="modal__button"><button class="restart"><svg class="icon">
+                    <use xlink:href="#restart"></use>
+                  </svg>Play again!</button></div>
+            </div>
+        </div>
+    </div>
+    <!-- <button onClick="modalbg.classList.add('modalbg_active')">OPEN WINDOW</button> -->
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

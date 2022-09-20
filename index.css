@@ -1,0 +1,208 @@
+:root {
+    --darkGrayColor: #515151;
+    --redColor: #FF4747;
+    --greenColor: #47FF4E
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F6F8FF;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 20px;
+
+    border: none;
+    border-radius: 15px;
+    background-color: var(--redColor);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+.cards__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.cards__container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px 0px 30px 0px;
+}
+
+.card {
+    position: relative;
+    width: 130px;
+    height: 170px;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card__front, .card__back {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    border: 10px solid white;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 0px 76px -36px rgba(0,0,0,0.38);
+    -moz-box-shadow: 1px 0px 76px -36px rgba(0,0,0,0.38);
+    box-shadow: 1px 0px 76px -36px rgba(0,0,0,0.38);
+    transition: 0.5s;
+    backface-visibility: hidden;
+}
+
+.card_opened .card__front {
+    transform: rotateY(180deg);
+}
+.card_opened .card__back {
+    transform: rotateY(360deg);
+}
+
+.card__front {
+    background: rgb(254,184,184);
+    background: linear-gradient(90deg, rgba(254,184,184,1) 0%, rgba(255,110,110,1) 100%);
+}
+
+.card__back {
+    background-color: white;
+    transform: rotateY(180deg);
+}
+
+.card_success .card__back {
+    background-color: var(--greenColor)
+    /* transform: rotateY(360deg); */
+}
+/* .card_success .card__front {
+    transform: rotateY(180deg);
+} */
+.card_error .card__back {
+    background-color: var(--redColor)
+}
+
+.card__back-picture {
+    width: 100%;
+}
+
+.timer {
+    text-align: center;
+    font-weight: 400;
+    color: var(--darkGrayColor);
+    font-size: 2em
+}
+
+.modal__background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    background: rgba(168, 168, 168, 0.7);
+    backdrop-filter: blur(90px);
+    display: none;
+}
+.modalbg_active {
+    display: block;
+    animation: modalBg_active 0.5s forwards
+}
+
+@keyframes modalBg_active {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+
+.modal__wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+}
+
+.modal_active {
+    display: flex;
+    animation: modalActive 0.5s forwards
+}
+
+@keyframes modalActive {
+    0% {
+      transform: scale(0.5, 0.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+}
+
+.modal {
+    height: 290px;
+    width: 400px;
+
+    padding: 15px;
+
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal__body {
+    position: relative;
+    height: 100%;;
+}
+
+.modal__picture img {
+    width: 70px
+}
+
+.modal__button {
+    position: absolute;
+    top: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
