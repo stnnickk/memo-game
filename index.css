@@ -17,6 +17,16 @@ body {
     width: 25px;
     height: 25px;
     margin-right: 5px;
+    transition: fill .4s
+}
+
+.github {
+    width: 30px;
+    height: 30px;
+    fill: var(--darkGrayColor)
+}
+.github:hover {
+    fill: var(--redColor)
 }
 
 button {
@@ -39,7 +49,8 @@ button {
     justify-content: center;
     align-items: center;
 
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 30px;
 }
 
 .cards__container {
@@ -125,6 +136,10 @@ button {
     font-weight: 400;
     color: var(--darkGrayColor);
     font-size: 2em
+}
+
+.footer {
+    text-align:center;
 }
 
 .modal__background {
