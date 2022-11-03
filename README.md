@@ -1,6 +1,8 @@
 # 🧠 Card memory game JavaScript
 This is a simple memory training game written in the JavaScript language. In it you need to find all the same pairs of cards in a certain time.
 
+<b>This game is not quite ready, i plan to add something to it.</b>
+
 <h2>🕹️ Play:</h2>
 https://stnnickk.github.io/memo-game/
 
